@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="checkbox_notify"
+        android:title="メッセージの表示"
+        android:summary="Notification" />
+
+    <CheckBoxPreference
+        android:key="checkbox_toast"
+        android:title=""
+        android:summary="Toast" />
+
+    <ListPreference
+        android:key="list_characters"
+        android:title="キャラクタ選択"
+        android:summary="Toast に反映されます"
+        android:entries="@array/entries_list_characters"
+        android:entryValues="@array/entryvalues_list_characters"
+        android:dialogTitle="キャラクタ選択" />
+
+</PreferenceScreen>

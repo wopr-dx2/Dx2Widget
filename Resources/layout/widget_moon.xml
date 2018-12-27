@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:focusable="true"
+  android:background="@color/bg_black"
+  android:id="@+id/widget"
+  android:orientation="vertical">
+
+  <include layout="@layout/panel_moon"/>
+  <include layout="@layout/panel_time"/>
+  <include layout="@layout/panel_reminder"/>
+  <include layout="@layout/panel_plans"/>
+
+</LinearLayout>

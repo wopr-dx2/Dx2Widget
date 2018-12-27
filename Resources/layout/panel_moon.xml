@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/layout_top"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/bg_black">
+
+  <ImageView
+    android:id="@+id/moon"
+    android:layout_width="97dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="3dp"
+    android:layout_gravity="center|top"
+    android:src="@drawable/FullMoon"/>
+
+  <ImageView
+    android:id="@+id/cloud"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="3dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/Clear"/>
+
+</FrameLayout>

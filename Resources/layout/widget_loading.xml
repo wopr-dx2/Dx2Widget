@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg_black">
+
+    <ImageView
+      android:id="@+id/icon"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_marginTop="10dp"
+      android:layout_gravity="center_horizontal"
+      android:src="@drawable/NewMoon" />
+
+    <TextView
+          android:id="@+id/subject"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:gravity="center"
+          android:textSize="12sp"
+          android:textColor="@android:color/white"
+          android:text="@string/loading_subject" />
+
+  <TextView
+          android:id="@+id/body"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:padding="5dp"
+          android:gravity="center|top"
+          android:textSize="10sp"
+          android:textColor="@android:color/white"
+          android:text="@string/loading_body" />
+
+</LinearLayout>

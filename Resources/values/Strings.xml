@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name">App8</string>
-    <string name="action_settings">Settings</string>
+  <string name="app_name">Dx2 Widget</string>
+  <string name="widget_name">Dx2 Widget</string>
+  <string name="action_settings">Settings</string>
+
+  <string name="loading_subject">
+    Dx2 Widget\ndeveloper: WOPR
+  </string>
+  <string name="loading_body">
+    Special thanks to\nSHIN MEGAMI TENSEI\nLiberation Dx2\n(C)SEGA / (C)ATLUS\n\nillust: @Margaret_75628
+  </string>
 </resources>
