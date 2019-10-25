@@ -164,6 +164,12 @@ namespace Dx2Widget
             // 月齢計算クラスに現在時刻を渡す
             Moon.Now = DateTime.Now;
 
+            // 時差の計算
+            // 満月の時間（日本時間）から 9 時間（日本標準時）を引いて、
+            // ローカル offset 値を足すようです
+            TimeSpan jp = new TimeSpan(-9, 0, 0);
+            TimeSpan local = new DateTimeOffset(DateTime.Now).Offset;
+
             // 表示関係（TextView や ImageView など）を操作するときのおまじない
             ComponentName componentName =
                 new ComponentName(context, Java.Lang.Class.FromType(typeof(Dx2WidgetProvider)));
@@ -183,8 +189,10 @@ namespace Dx2Widget
             // 月齢の表示
             remoteViews.SetImageViewResource(Resource.Id.moon, Moon.MoonId);
 
-            // 現在時間の表示
-            remoteViews.SetTextViewText(Resource.Id.time0, Moon.Now.ToString(FORMAT_HHMM));
+            // 現在時間の表示  -- v0.9.3 時差対応
+            remoteViews.SetTextViewText(
+                Resource.Id.time0,
+                Moon.Now.Add(jp).Add(local).ToString(FORMAT_HHMM));
 
             // リマインダバーと残り時間（分）の表示
             if (Moon.Age == MoonAges.Full)
@@ -212,11 +220,11 @@ namespace Dx2Widget
                     Resource.Id.reminder_time, Moon.RemindMinutes.ToString());
             }
 
-            // 時差の関係
-            // 満月の時間（日本時間）から 9 時間（日本標準時）を引いて、
-            // ローカル offset 値を足すようです
-            TimeSpan jp = new TimeSpan(-9, 0, 0);
-            TimeSpan local = new DateTimeOffset(DateTime.Now).Offset;
+            //// 時差の関係
+            //// 満月の時間（日本時間）から 9 時間（日本標準時）を引いて、
+            //// ローカル offset 値を足すようです
+            //TimeSpan jp = new TimeSpan(-9, 0, 0);
+            //TimeSpan local = new DateTimeOffset(DateTime.Now).Offset;
 
             DateTime[] dateTimes = new DateTime[6]
             {
